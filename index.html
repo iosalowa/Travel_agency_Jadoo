@@ -3,50 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">  
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Poppins:wght@400;500;600;700&family=Volkhov:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/normalise.css">
-    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="css/normalise.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" type="image/x-icon" src="img/favicon_io-2/favicon.ico">
+    <link rel="icon" type="image/png" src="img/favicon_io-2/favicon-32x32.png">
     <title>Jadoo</title>
 </head>
 <body>
     <header>
             <div class="container header_container">
-                    <a class="header_logo" href=""><img src="/img/Logo.png"></a>
-                    <nav class="header_nav">
-                        <ul class="header_nav_list">
-                            <li class="header_nav_item font_google_sans font_google_sans_400">Desitnations</li>
-                            <li class="header_nav_item font_google_sans font_google_sans_400">Hotels</li>
-                            <li class="header_nav_item font_google_sans font_google_sans_400">Flights</li>
-                            <li class="header_nav_item font_google_sans font_google_sans_400">Bookings</li>
+                    <a class="header_logo" href=""><img src="img/Logo.png"></a>
+                    <nav class="header_nav hide_on_mobile">
+                        <ul>
+                            <li class="header__nav_item">
+                                <a href="#destinations" class="header__nav_item_link font_google_sans font_google_sans_400">Desitnations</a></li>
+                            <li class="header__nav_item">
+                                <a href="#" class="header__nav_item_link font_google_sans font_google_sans_400">Hotels</a></li>
+                            <li class="header__nav_item">
+                                <a href="#flights" class="header__nav_item_link font_google_sans font_google_sans_400">Flights</a></li>
+                            <li class="header__nav_item">
+                                <a href="#bookings" class="header__nav_item_link font_google_sans font_google_sans_400">Bookings</a></li>
                         </ul>
                     </nav>
-                    <a class="header_login font_google_sans font_google_sans_500" href="">Login</a>
-                    <a class="header_btn font_google_sans font_google_sans_500" href="">Sign up</a>
+                    <a class="header_login font_google_sans font_google_sans_500 hide_on_mobile" href="">Login</a>
+                    <a class="header_btn font_google_sans font_google_sans_500 hide_on_mobile" href="">Sign up</a>
                     <div class="header_lang">
-                        <select class="header_lang_select font_google_sans font_google_sans_500" name="select" id="select">
-                            <option value="header_lang_item">EN</option>
-                            <option value="header_lang_item">ES</option>
-                            <option value="header_lang_item">FR</option>
-                        </select></label>
+                        <select class="font_google_sans font_google_sans_500 hide_on_mobile" name="select" id="select">
+                            <option>EN</option>
+                            <option>ES</option>
+                            <option>FR</option>
+                        </select>
+                    </div>
+                    <div class="show_on_mobile burger_menu">
+                            <div class="burger_menu_line"></div>
+                            <div class="burger_menu_line burger_menu_line_middle"></div>
+                            <div class="burger_menu_line"></div>
                     </div>
             </div>
     </header>
     <main>
             <section class="hero_section">
                     <div class="container hero_container">
+                        <div class="hero_container_left_right show_on_mobile">
+                            <img src="img/hero/hero_traveller.png" alt="logo_travel">
+                        </div>
                         <div class="hero_container_left">
                             <div class="hero_container_left_content">
                                 <h3 class="hero_container_left_content_slogan">Best Destinations around the world</h3>
                                 <h1 class="hero_container_left_content_title">Travel, enjoy and live a new and full life</h1>
-                                <img class="hero_container_content_decor" src="/img/hero/Decore_sign.png" alt="pic_sign">
+                                <img class="hero_container_content_decor" src="img/hero/Decore_sign.png" alt="pic_sign">
                                 <p class="hero_container_content_description">Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening. Park gate sell they west hard for the.</p>
                                 <div class="hero_container_content_bottom">
                                     <a class="hero_container_content_btn font_google_sans font_google_sans_500" href="">Find out more</a>
-                                    <img class="hero_container_content_play" src="/img/hero/Play button.png" alt="pic_play">
-                                    <a class="hero_container_content_link" href="">Find out more</a>
+                                    <!-- <img class="hero_container_content_play" src="img/hero/Play button.png" alt="pic_play"> -->
+                                    <div class="hero_container_content_play">
+                                        <img class="hero_container_content_play_img" src="img/Polygon 1.png" alt="pic_play">
+                                    </div>
+                                    <a class="hero_container_content_link" href="">Play Demo</a>
                                 </div>
                             </div>
                         </div>
@@ -58,85 +75,83 @@
                 <h5 class="category_section_title font_poppins font_poppins_600">CATEGORY</h5>
                 <h3 class="category_section_slogan font_volkhov_50">We Offer Best Services</h3>
             </div>
-            <!-- <img src="/img/category/Group 4.png" alt="logo_pluses"> -->
             <ul class="category_section_nav">
                 <li class="category_section_nav_item">
-                        <img class="category_section_nav_item_pic" src="/img/category/weather.png">
-                        <h6 class="category_section_nav_item_title font_google_sans font_google_sans_600">Calculated Weather</h6>
-                        <p class="category_section_nav_item_description font_poppins font_poppins_500">Built Wicket longer admire do barton vanity itself do in it.</p>
+                    <img class="category_section_nav_item_pic_weather" src="img/category/weather.png">
+                    <h6 class="category_section_nav_item_title font_google_sans font_google_sans_600">Calculated Weather</h6>
+                    <p class="category_section_nav_item_description font_poppins font_poppins_500">Built Wicket longer admire do barton vanity itself do in it.</p>
                 </li>
                 <li class="category_section_nav_item">
-                    <!-- <img class="category_section_nav_item_pic category_section_nav_item_pic_flights" src="/img/category/flights.png"> -->
                     <div class="category_section_nav_item_flights">
-                        <img class="category_section_nav_item_plane" src="/img/category/flights.png" alt="logo_plane">
-                        <!-- <img class="category_section_nav_item_rectangle" src="/img/category/flights/Rectangle 158.png" alt="logo_rectangle"> -->
+                        <img class="category_section_nav_item_plane" src="img/category/flights/plane.png" alt="logo_plane">
+                        <img class="category_section_nav_item_rectangle" src="img/category/flights/Rectangle 158.png" alt="logo_rectangle">
                     </div>
                     <h6 class="category_section_nav_item_title font_google_sans font_google_sans_600">Best Flights</h6>
                     <p class="category_section_nav_item_description font_poppins font_poppins_500">Engrossed listening. Park gate sell they west hard for the.</p>
                 </li>
-                <li class="category_section_nav_item">
-                    <img class="category_section_nav_item_pic" src="/img/category/events.png">
+                <li class="category_section_nav_item category_section_nav_item_events">
+                    <img class="category_section_nav_item_pic_events" src="img/category/events.png">
                     <h6 class="category_section_nav_item_title font_google_sans font_google_sans_600">Local Events</h6>
                     <p class="category_section_nav_item_description font_poppins font_poppins_500">Barton vanity itself do in it. Preferd to men it engrossed listening. </p>
                 </li>
                 <li class="category_section_nav_item">
-                    <img class="category_section_nav_item_pic" src="/img/category/customization.png">
+                    <img class="category_section_nav_item_pic_custom" src="img/category/customization.png">
                     <h6 class="category_section_nav_item_title font_google_sans font_google_sans_600">Customization</h6>
                     <p class="category_section_nav_item_description font_poppins font_poppins_500">We deliver outsourced aviation services for military customers</p>
                 </li>
             </ul>
         </div>
     </section>
-    <section class="top_selling_section">
+    <section id="destinations" class="top_selling_section">
         <div class="container top_selling_container">
             <div class="top_selling_section_header">
                 <h5 class="top_selling_section_header_title font_poppins font_poppins_600">Top Selling</h5>
                 <h3 class="top_selling_section_slogan font_volkhov_50">Top Destinations</h3>
             </div>
             <ul class="top_selling_section_list">
-                <li class="top_selling_section_list_item">
-                    <img class="top_selling_section_list_item_picture" src="/img/top_selling/Rome.png" alt="logo_rome">
-                    <div class="container top_selling_container_small top_selling_bottom">
+                <li class="top_selling_section_list_item top_selling_section_list_item_Rome">
+                    <img class="top_selling_section_list_item_picture" src="img/top_selling/Rome.png" alt="logo_rome">
+                    <div class="top_selling_container_small top_selling_bottom">
                         <div class="top_selling_section_list_item_desctination">
-                            <p class="top_selling_section_list_item_citi font_poppins font_poppins_500">Rome, Italy</p>
-                            <p class="top_selling_section_list_item_price font_poppins font_poppins_500">$5,42k</p>
+                            <a href="https://goo.gl/maps/DWvt24dy2uQrmTPh7" class="top_selling_section_list_item_citi font_poppins font_poppins_500" target="_blank">Rome, Italy</a>
+                            <a class="top_selling_section_list_item_price font_poppins font_poppins_500">$5,42k</a>
                         </div>
                         <div class="top_selling_section_list_item_nav">
-                            <img src="/img/top_selling/navigation 1.png" alt="logo_nav">
-                            <p class="top_selling_section_list_item_during font_poppins font_poppins_500">10 Days Trip</p>
+                            <img src="img/top_selling/navigation 1.png" alt="logo_nav">
+                            <a class="top_selling_section_list_item_during font_poppins font_poppins_500">10 Days Trip</a>
                         </div>
                     </div>
                 </li>
                 <li class="top_selling_section_list_item top_selling_section_list_item_london">
-                    <img class="top_selling_section_list_item_picture" src="/img/top_selling/London.jpg" alt="logo_london">
-                    <div class="container top_selling_container_small">
+                    <img class="top_selling_section_list_item_picture" src="img/top_selling/London.jpg" alt="logo_london">
+                    <div class="top_selling_container_small">
                         <div class="top_selling_section_list_item_desctination">
-                            <p class="top_selling_section_list_item_citi font_poppins font_poppins_500">London, UK</p>
+                            <a href="https://goo.gl/maps/VpUxT7TSEZzEoPSLA" class="top_selling_section_list_item_citi font_poppins font_poppins_500" target="_blank">London, UK</a>
                             <p class="top_selling_section_list_item_price font_poppins font_poppins_500">$4.2k</p>
                         </div>
                         <div class="top_selling_section_list_item_nav">
-                            <img src="/img/top_selling/navigation 1.png" alt="logo_nav">
-                            <p class="top_selling_section_list_item_during font_poppins font_poppins_500">12 Days Trip</p>
+                            <img src="img/top_selling/navigation 1.png" alt="logo_nav">
+                            <a class="top_selling_section_list_item_during font_poppins font_poppins_500">12 Days Trip</a>
                         </div>
                     </div>
                 </li>
                 <li class="top_selling_section_list_item top_selling_section_list_item_europe">
-                    <img class="top_selling_section_list_item_picture" src="/img/top_selling/Europe.png" alt="logo_europe">
-                    <div class="container top_selling_container_small top_selling_bottom">
+                    <img class="top_selling_section_list_item_picture" src="img/top_selling/Europe.png" alt="logo_europe">
+                    <div class="top_selling_container_small top_selling_bottom">
                         <div class="top_selling_section_list_item_desctination">
-                            <p class="top_selling_section_list_item_citi font_poppins font_poppins_500">Full Europe</p>
+                            <a href="https://goo.gl/maps/mjqbrVKEnPLXvmBdA" class="top_selling_section_list_item_citi font_poppins font_poppins_500" target="_blank">Full Europe</a>
                             <p class="top_selling_section_list_item_price font_poppins font_poppins_500">$15k</p>
                         </div>
                         <div class="top_selling_section_list_item_nav">
-                            <img src="/img/top_selling/navigation 1.png" alt="logo_nav">
-                            <p class="top_selling_section_list_item_during font_poppins font_poppins_500">28 Days Trip</p>
+                            <img src="img/top_selling/navigation 1.png" alt="logo_nav">
+                            <a class="top_selling_section_list_item_during font_poppins font_poppins_500">28 Days Trip</a>
                         </div>
                     </div>
                 </li>
             </ul>
         </div>
     </section>
-    <section class="easy_and_fast_section">
+    <section id="bookings" class="easy_and_fast_section">
         <div class="container easy_and_fast_container">
             <div class="easy_and_fast_section_left">
                 <h5 class="easy_and_fast_section_left_title font_poppins font_poppins_600">Easy and Fast</h5>
@@ -144,36 +159,36 @@
                 <ul class="easy_and_fast_section_left_list">
                     <li class="easy_and_fast_section_left_list_item">
                         <div class="easy_and_fast_section_left_list_item_icon">
-                            <img src="/img/easy_and_fast/icon_dest.png" alt="logo_destination">
+                            <img src="img/easy_and_fast/icon_dest.png" alt="logo_destination">
                         </div>
                         <div class="easy_and_fast_section_left_list_item_description">
-                            <p class="font_poppins font_poppins_700">Choose Destination</p>
-                            <p class="font_poppins font_poppins_400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+                            <p class="easy_and_fast_section_left_list_item_description_title font_poppins font_poppins_700">Choose Destination</p>
+                            <p class="easy_and_fast_section_left_list_item_description_lorem font_poppins font_poppins_400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
                         </div>
                     </li>
                     <li class="easy_and_fast_section_left_list_item">
                         <div class="easy_and_fast_section_left_list_item_icon">
-                            <img src="/img/easy_and_fast/icon_beach.png" alt="logo_beach">
+                            <img src="img/easy_and_fast/icon_beach.png" alt="logo_beach">
                         </div>
                         <div class="easy_and_fast_section_left_list_item_description">
-                            <p class="font_poppins font_poppins_700">Make Payment</p>
-                            <p class="font_poppins font_poppins_400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+                            <p class="easy_and_fast_section_left_list_item_description_title font_poppins font_poppins_700">Make Payment</p>
+                            <p class="easy_and_fast_section_left_list_item_description_lorem font_poppins font_poppins_400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
                         </div>
                     </li>
                     <li class="easy_and_fast_section_left_list_item">
                         <div class="easy_and_fast_section_left_list_item_icon">
-                            <img src="/img/easy_and_fast/icon_car.png" alt="logo_car">
+                            <img src="img/easy_and_fast/icon_car.png" alt="logo_car">
                         </div>
                         <div class="easy_and_fast_section_left_list_item_description">
-                            <p class="font_poppins font_poppins_700">Reach Airport on Selected Date</p>
-                            <p class="font_poppins font_poppins_400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+                            <p class="easy_and_fast_section_left_list_item_description_title font_poppins font_poppins_700">Reach Airport on Selected Date</p>
+                            <p class="easy_and_fast_section_left_list_item_description_lorem font_poppins font_poppins_400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
                         </div>
                     </li>
                 </ul>
             </div>
             <div class="easy_and_fast_section_right">
                 <div class="easy_and_fast_section_right_blue">
-                    <img class="easy_and_fast_section_right_blue_img" src="/img/easy_and_fast/Group 589.png" alt="pic_blue_shadow">
+                    <img class="easy_and_fast_section_right_blue_img" src="img/easy_and_fast/Group 589.png" alt="pic_blue_shadow">
                 </div>
                 <div class="easy_and_fast_section_right_main_img">
                        <div class="easy_and_fast_section_right_main_img_rectangle">
@@ -182,16 +197,16 @@
                             <h5 class="easy_and_fast_section_right_container_title font_poppins font_poppins_500">Trip To Greece</h5>
                             <p class="easy_and_fast_section_right_container_data font_poppins font_poppins_500">14-29 June | by Robbin joseph</p>
                             <div class="easy_and_fast_section_right_container_icons">
-                                <img src="/img/easy_and_fast/LEAF.png" alt="logo_leaf">
-                                <img src="/img/easy_and_fast/map icon.png" alt="logo_map_icon">
-                                <img src="/img/easy_and_fast/send.png" alt="logo_send">
+                                <img src="img/easy_and_fast/LEAF.png" alt="logo_leaf">
+                                <img src="img/easy_and_fast/map icon.png" alt="logo_map_icon">
+                                <img src="img/easy_and_fast/send.png" alt="logo_send">
                             </div>
                             <div class="easy_and_fast_section_right_container_footer">
                                 <div class="easy_and_fast_section_right_container_footer_left"> 
-                                    <img src="/img/easy_and_fast/building 1.png" alt="pic_building">
+                                    <img src="img/easy_and_fast/building 1.png" alt="pic_building">
                                     <p class="easy_and_fast_section_right_container_footer_left_sign font_poppins font_poppins_500">24 people going</p>
                                 </div>
-                                <img src="/img/easy_and_fast/heart (6) 1.png" alt="pic_heart">
+                                <img class="easy_and_fast_section_right_container_footer_heart" src="img/easy_and_fast/Vector.svg" alt="pic_heart">
                             </div>
                         </div>
                     </div>
@@ -199,12 +214,12 @@
                 <div class="easy_and_fast_section_right_block">
                     <div class="easy_and_fast_section_right_block_main_rectangle">
                         <div class="easy_and_fast_section_right_block_main_content">
-                            <img class="easy_and_fast_section_right_block_main_img" src="/img/easy_and_fast/church_icon.png" alt="pic_church">
+                            <img class="easy_and_fast_section_right_block_main_img" src="img/easy_and_fast/church_icon.png" alt="pic_church">
                             <div class="easy_and_fast_section_right_block_main_content_text">
                                 <p class="easy_and_fast_section_right_block_main_content_text_title font_poppins font_poppins_500">Ongoing</p>
                                 <h5 class="easy_and_fast_section_right_block_main_content_text_slogan font_poppins font_poppins_500">Trip to Rome</h5>
-                                <p class="easy_and_fast_section_right_block_main_content_description"><span class="percent_color">40%</span> completed</p>
-                                <img class="easy_and_fast_section_right_block_main_content_loading" src="/img/easy_and_fast/loading.png" alt="pic_loading">
+                                <p class="easy_and_fast_section_right_block_main_content_description"><span class="percent_color">40%</span> <span>completed</span></p>
+                                <img class="easy_and_fast_section_right_block_main_content_loading" src="img/easy_and_fast/loading.png" alt="pic_loading">
                             </div>
                         </div>
                     </div>
@@ -217,10 +232,10 @@
                     <div class="testimonials_section_container_right">
                             <h5 class="category_section_title font_poppins font_poppins_600">Testimonials</h5>
                             <h3 class="testimonials_section_container_right_title font_volkhov_50">What People Say About Us.</h3>
-                            <img class="testimonials_section_container_right_points" src="/img/testimonials/points.png" alt="logo_points">
+                            <img class="testimonials_section_container_right_points" src="img/testimonials/points.png" alt="logo_points">
                     </div>
                     <div class="testimonials_section_container_left">
-                            <img class="testimonials_section_container_left_icon" src="/img/testimonials/user.png" alt="pic_user">
+                            <img class="testimonials_section_container_left_icon" src="img/testimonials/user.png" alt="pic_user">
                             <div class="testimonials_section_container_left_main">
                                 <div class="testimonials_section_container_left_main_container">
                                     <p class="testimonials_section_container_left_main_description font_poppins font_poppins_500">“On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”</p>
@@ -234,65 +249,70 @@
                                     <p class="testimonials_section_container_left_bottom_position font_poppins font_poppins_500">CEO of Red Button</p>
                                 </div>
                             </div>
-                            <img class="testimonials_section_container_left_bottom_pagination" src="/img/testimonials/Pagination.png" alt="pic_pagination">
+                            <img class="testimonials_section_container_left_bottom_pagination" src="img/testimonials/Pagination.png" alt="pic_pagination">
                     </div>
             </div>
     </section>
-    <section class="airlines_section">
+    <section id="flights" class="airlines_section">
             <div class="container airlines_container">
-                <img class="airlines_container_item airlines_container_item_axon" src="/img/testimonials/axon.png" alt="logo_axon">
-                <img class="airlines_container_item airlines_container_item_jetstar" src="/img/testimonials/Jetstar.png" alt="logo_jetstar">
-                <img class="airlines_container_item airlines_container_item_expedia" src="/img/testimonials/Expedia.png" alt="logo_expedia">   
-                <img class="airlines_container_item airlines_container_item_qantas" src="/img/testimonials/Qantas.png" alt="logo_qantas">
-                <img class="airlines_container_item airlines_container_item_allitalia" src="/img/testimonials/AllItalia.png" alt="logo_allitalia">
+                <img class="airlines_container_item airlines_container_item_axon" src="img/testimonials/axon.png" alt="logo_axon">
+                <img class="airlines_container_item airlines_container_item_jetstar" src="img/testimonials/Jetstar.png" alt="logo_jetstar">
+                <img class="airlines_container_item airlines_container_item_expedia" src="img/testimonials/Expedia.png" alt="logo_expedia">   
+                <img class="airlines_container_item airlines_container_item_qantas" src="img/testimonials/Qantas.png" alt="logo_qantas">
+                <img class="airlines_container_item airlines_container_item_allitalia" src="img/testimonials/AllItalia.png" alt="logo_allitalia">
             </div>
     </section>
     <section class="subscribe_section">
             <div class="container subscribe_section_container">
-                    <img class="subscribe_section_nav_icon" src="/img/subscribe/logo_nav.png">
+                    <img class="subscribe_section_nav_icon" src="img/subscribe/logo_nav.png">
                     <div class="subscribe_section_content">
                             <h3 class="subscribe_section_slogan font_poppins font_poppins_600">Subscribe to get information, latest news and other
                                 interesting offers about Cobham</h3>
-                            <form class="subscribe_section_form" action="https://jsonplaceholder.typicode.com/posts" autocomplete method="post" class="form">
+                            <form class="subscribe_section_form" action="">
                                 <input type="email" name="email" class="subscribe_section_form_email" placeholder="Your email" required>
                                 <button type="submit" class="subscribe_section_form_btn">Subscribe</button>
                             </form>
                     </div>
             </div>
-            <img class="subscribe_section_pluses" src="/img/subscribe/pluses.png">
+            <img class="subscribe_section_pluses" src="img/subscribe/pluses.png">
     </section>
     </main>
     <footer>
         <div class="container footer_container">
             <div class="footer_container_left">
-                <img src="/img/footer/Jadoo..png" alt="jadoo_logo">
+                <img src="img/footer/Jadoo..png" alt="jadoo_logo">
                 <p class="font_poppins font_poppins_500">Book your trip in minute, get full Control for much longer.</p>
             </div>
             <div class="footer_container_center">
                 <ul>Company
-                    <li>About</li>
-                    <li>Careers</li>
-                    <li>Mobile</li>
+                    <li><a>About</a></li>
+                    <li class="footer_container_center_middle_link"><a>Careers</a></li>
+                    <li><a>Mobile</a></li>
                 </ul>
                 <ul> Contact
-                    <li>Help/FAQ</li>
-                    <li>Press</li>
-                    <li>Affilates</li>
+                    <li><a>Help/FAQ</a></li>
+                    <li class="footer_container_center_middle_link"><a>Press</a></li>
+                    <li><a>Affilates</a></li>
                 </ul>
                 <ul> More
-                    <li>Airlinefees</li>
-                    <li>Airline</li>
-                    <li>Low fare tips</li>
+                    <li><a>Airlinefees</a></li>
+                    <li class="footer_container_center_middle_link"><a>Airline</a></li>
+                    <li><a>Low faretips</a></li>
                 </ul>
             </div>
             <div class="footer_container_right">
-                <img src="/img/footer/Social.png" alt="logo_media">
+                <div class="footer_container_right_social">
+                        <a href="https://www.facebook.com" target="_blank"><img src="img/footer/facebook.png" alt="logo_facebook"></a>
+                        <a href="https://www.instagram.com" target="_blank"><img class="footer_container_right_social_insta" src="img/footer/Insta.png" alt="logo_insta"></a>
+                        <a href="https://twitter.com" target="_blank"><img src="img/footer/twitter.png" alt="logo_twitter"></a>
+                </div>
                 <p>Discover our app</p>
-                <img src="/img/footer/Google Play.png" alt="logo_google_play">
-                <img src="/img/footer/Play Store.png" alt="logo_play_store">
+                <img class="footer_container_right_social_mbl_store" src="img/footer/Google Play.png" alt="logo_google_play">
+                <img class="footer_container_right_social_mbl_store" src="img/footer/Play Store.png" alt="logo_play_store">
             </div>
         </div>
         <p class="allrights font_poppins font_poppins_500">All rights reserved@jadoo.co</p>
     </footer>
+    <script src="script.js" type="module"></script>
 </body>
 </html>
