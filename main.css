@@ -3,7 +3,7 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family: 'Epilogue', sans-serif;
+        font-family: "Epilogue", sans-serif;
     }
     ul {
         list-style: none;
@@ -16,6 +16,9 @@
     img {
         max-width: 100%;
         height: auto;
+    }
+    p {
+        margin: 0;
     }
     .container {
         max-width: 1200px;
@@ -70,7 +73,7 @@
         display: inline-block;
     }
     .font_google_sans {
-        font-family: 'Open Sans', sans-serif;
+        font-family: "Open Sans", sans-serif;
         font-size: 17px;
         line-height: 21.62px;
         color: #212832;
@@ -88,7 +91,7 @@
         color: #1E1D4C;
     }
     .font_poppins {
-        font-family: 'Poppins';
+        font-family: "Poppins";
         color: #5E6282;
     }
     .font_poppins_400 {
@@ -103,8 +106,8 @@
         line-height: 26px;
     }
     .font_poppins_600 {
-        font-style: 'SemiBold';
-        font-weight: 600;
+        /*font-style: 'SemiBold' ;*/
+        font-weight: bold 600;
         font-size: 18px;
         line-height: 27px;
     }
@@ -115,7 +118,7 @@
         line-height: 20px;
     }
     .font_volkhov_50 {
-        font-family: 'Volkhov';
+        font-family: "Volkhov";
         font-size: 50px;
         line-height: 65px;
         color: #14183E;
@@ -147,6 +150,10 @@
         display: flex;
         justify-content: space-between;
     }
+    .header_nav_item:hover, .header_login:hover {
+        color: #8A79DF;
+        cursor: pointer;
+    }
     .header_login {
         margin-right: 4.36%;
     }
@@ -156,6 +163,10 @@
         border-radius: 5px;
         margin-right: 3.52%;
     }
+    .header_btn:hover {
+        border: 1px solid #8A79DF;
+        color: #8A79DF;
+    } 
     .header_lang {
         display: flex;
         align-items: center;
@@ -200,14 +211,14 @@
     .hero_container_left_content_slogan {
         text-transform: uppercase;
         color: #DF6951;
-        font-family: 'Poppins';
+        font-family: "Poppins";
         font-weight: 700;
         font-style: Bold;
         font-size: 20px;
         line-height: 30px;
     }
     .hero_container_left_content_title {
-        font-family: 'Volkhov';
+        font-family: "Volkhov";
         font-weight: 700;
         font-style: Bold;
         font-size: 84px;
@@ -224,7 +235,7 @@
     }
     .hero_container_content_description {
         color: #5E6282;
-        font-family: 'Poppins';
+        font-family: "Poppins";
         font-weight: 500;
         font-style: Medium;
         font-size: 16px;
@@ -249,11 +260,20 @@
         position: relative;
         top:15px;
     }
+    .hero_container_content_play:hover {
+        cursor: pointer;
+    }
 .hero_container_content_link {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-weight: 500;
     font-size: 17px;
     color: #686D77;
+}
+.hero_container_content_link:hover {
+    color: #8A79DF;
+}
+.hero_container_content_btn:hover {
+    background-color: #8A79DF;
 }
 
 /*CATEGORY*/
@@ -278,8 +298,10 @@
 .category_section_nav {
     margin-top: 66.09px;
     max-width: 1089px;
+    height: 349px;
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
+    align-items: center;
 }
 .category_section_nav_item {
     width: 190px;
@@ -291,15 +313,8 @@
     background-color: #FFFFFF;
     z-index: 2;
 }
-.category_section_nav_item_flights {
-    position: relative;
-    width: 138px;
-    height: 92px;
-}
-.category_section_nav_item_plane {
-    position: relative;
-    bottom: 20px;
-    z-index: 1;
+.category_section_nav_item:not(:last-child) {
+    margin-right: 100px;
 }
 .category_section_nav_item_rectangle {
     position: relative;
@@ -310,10 +325,16 @@
     width: 267px;
     height: 314px;
     border: 1px solid rgba(255, 255, 255);
-    box-shadow: 0 0 30px 0 rgba(213, 214, 219, 0.15);
+    box-shadow: 0 0 30px 3px rgba(213, 214, 219, 0.15);
     border-radius: 36px;
-    padding: 0px 42px 45px 44px;
+    padding: 40px 42px 45px 44px;
 }
+/* don't delete!
+.category_section_nav_item:hover::before {
+   background-image: url(/img/category/Rectangle\ 157.png);
+   position: relative;
+   left: 20px;
+}*/
 
 
 /*TOP Seller*/
@@ -368,6 +389,10 @@
 .top_selling_section_list_item_during {
     margin-left: 15px;
 }
+.top_selling_section_list_item_during:hover {
+    cursor: pointer;
+    color: #8A79DF;
+}
 
 /*Easy and fast SECTION*/
 .easy_and_fast_container {
@@ -421,6 +446,7 @@
     border: 1px solid #FFFFFF;
     border-radius: 26px;
     margin-top: 78px;
+    box-shadow: -15px 15px  30px 5px rgba(132, 130, 154, 0.20);
 }
 .easy_and_fast_section_right_block_main_rectangle {
     width: 263px;
@@ -596,8 +622,11 @@
     justify-content: space-between;
     align-items: center;
 }
-.airlines_container_item_axon {
-    width: 130px;
+.airlines_container_item:hover {
+    box-shadow: 0 15px 5px rgba(0, 0, 0, 0.1);
+}
+/*.airlines_container_item_axon {
+    /*width: 130px;
     height: 130px;
 }
 .airlines_container_item_jetstar {
@@ -615,7 +644,7 @@
 .airlines_container_item_allitalia {
     width: 94px;
     height: 21px;
-}
+}*/
 
 /*SUBSCRIBE SECTION*/
 .subscribe_section {
@@ -675,6 +704,11 @@
     padding: auto;
     font-size: 17px;
     margin-left: 22px;
+    line-height: 1;
+}
+.subscribe_section_form_btn:hover {
+    cursor: pointer;
+    background: linear-gradient(180deg, #8A79DF);
 }
 .subscribe_section_pluses {
     position: relative;
@@ -712,7 +746,7 @@ footer {
     justify-content: space-between;
 }
 .footer_container_center ul {
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-weight: 700;
     font-size: 21px;
     line-height: 26.15px;
@@ -723,8 +757,12 @@ footer {
     font-size: 18px;
     line-height: 22.41px;
     margin-top: 12px;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-weight: 500;
+}
+.footer_container_center li:hover {
+    cursor: pointer;
+    color: #8A79DF;
 }
 .footer_container_center li:first-child {
     margin-top: 34px;
